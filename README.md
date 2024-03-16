@@ -1,8 +1,7 @@
 # SalesHub 
 
 ## Introduction 📖
-
-SalesHub  is a web-based cash register system designed to streamline sales transactions, calculate totals, and generate receipts. The project provides an intuitive interface for cashiers and incorporates features such as inactivity timeout and secure user sessions.
+SalesHub  is a simple web-based point of service(POS) system designed to streamline sales transactions, calculate totals, and generate receipts. The project provides an intuitive interface for cashiers and incorporates features such as inactivity timeout and secure user sessions.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -18,7 +17,7 @@ SalesHub  is a web-based cash register system designed to streamline sales trans
 
 ## Overview
 
-SalesHub Interface is designed to facilitate efficient sales transactions in various retail settings. The system provides a user-friendly interface for cashiers to manage items, calculate totals, and generate receipts. Notable features include inactivity timeout to enhance security and automatic logout after a period of user inactivity.
+SalesHub is designed to facilitate efficient sales transactions in various retail settings. The system provides a user-friendly interface for cashiers to manage items, calculate totals, and generate receipts. Notable features include inactivity timeout to enhance security and automatic logout after a period of user inactivity.
 
 ## Features
 
@@ -41,58 +40,12 @@ SalesHub Interface is designed to facilitate efficient sales transactions in var
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/KSI5/saleshub.git
-Absolutely! Here's an enhanced README.md with more details, including information about the inactivity functions and all used functions. I'm assuming you'd like to keep your GitHub username as "KSI5". Feel free to make any additional adjustments.
-
-```markdown
-# SalesHub Interface
-
-SalesHub Interface is a web-based cash register system designed to streamline sales transactions, calculate totals, and generate receipts. The project provides an intuitive interface for cashiers and incorporates features such as inactivity timeout and secure user sessions.
-
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Project Architecture](#project-architecture)
-- [Functions Overview](#functions-overview)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Overview
-
-SalesHub Interface is designed to facilitate efficient sales transactions in various retail settings. The system provides a user-friendly interface for cashiers to manage items, calculate totals, and generate receipts. Notable features include inactivity timeout to enhance security and automatic logout after a period of user inactivity.
-
-## Features
-
-- **Product Selection:** Easily select items from a predefined list with corresponding prices.
-- **Tray Management:** Add selected items to the tray for a transaction summary.
-- **Total Calculation:** Calculate the total amount based on the items in the tray.
-- **Cash Handling:** Enter cash tendered and calculate change due.
-- **Purchase History:** View a history of past purchases, including cashier names and transaction details.
-- **Session Management:** Automatically log out users after a period of inactivity.
-
-## Getting Started
-
-### Prerequisites
-
-- Web browser (Chrome, Firefox, Safari, etc.)
-- Node.js installed (for development purposes)
-
-### Installation
-
-1. Clone the repository to your local machine:
-
-```bash
-git clone https://github.com/KSI5/saleshub-interface.git
-```
+git clone https://github.com/KSI5/SalesHub.git.
 
 2. Navigate to the project directory:
 
 ```bash
-cd saleshub-interface
+cd SalesHub
 ```
 
 3. Open the `index.html` file in your preferred web browser.
@@ -161,5 +114,4 @@ Contributions are welcome! Please follow the [Contributing Guidelines](CONTRIBUT
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
-
 
