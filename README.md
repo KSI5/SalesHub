@@ -66,7 +66,14 @@ The project is structured as follows:
 - **index.html:** The main HTML file containing the structure of the web interface.
 - **cash_register.js:** The JavaScript file handling the logic for product selection, tray management, and calculations.
 - **cash_register_styles.css:** The CSS file providing styles for the user interface.
+- **cash_register.html:** This HTML file serves as the main interface for the cash register application. It provides the structure and 
+  layout for the user interface elements, allowing users to interact with the cash register functionality.
+- **style.css:** The CSS file responsible for styling the user interface elements in the cash register application. It defines the   
+   visual appearance, layout, and presentation of the HTML elements defined in the cash_register.html file.
+- **server.js:** This file contains the server-side JavaScript code responsible for handling HTTP requests and responses, as well as 
+  managing the backend logic of the application.
 - **README.md:** This file containing information about the project.
+  
 
 ## Functions Overview
 
