@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cash_register_styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha384-GLhlTQ8iE7Nt6L/6Uq7W1o8KZFQV1eDk+3+g4I+U8Xyp41t0pZl/6H7jk9aI5t9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Include Font Awesome CSS -->
+
+    <title>SalesHub Interface</title>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <h1 class="mb-0"><span style="color: white;"><i class="fas fa-cart-shopping"></i> SalesHub</span></h1>
+   <p class="mb-0"><i class="fas fa-code-branch"></i> V.0.0.1</p>
+   <!-- Real-time clock -->
+   <!-- Add this div for the fancy clock widget -->
+<div id="fancyClock" class="fancy-clock">Loading...</div>
+</header>
+
+    <div class="cash-register-container">
+        <div class="cash-register-form">
+            <h1><span id="userName"></span></h1>
+            <p class="welcome-message">You are now logged in to the SalesHub Dashboard.</p>
+
+            <!-- Real-time Day, Month, and Time -->
+            <!-- Add this div for the real-time clock -->
+            <div id="realTime" class="clock">Loading...</div>
+            <div id="timer" class="timer">Session Duration: <span id="duration">00:00:00</span></div>
+
+            <!-- Basic Cash Register Form -->
+<form id="cashRegisterForm" onsubmit="return false">
+    <div class="input-container ">
+        <label for="product_name" class="input-label"><b>Select Item:</b></label>
+        <select id="product_name" name="product_name" class="styled-select" required>
+<option value="" style="font-family: 'Poppins', sans-serif; color: #999;"></option>
+            <option value="Sunlight Detergent">Sunlight Detergent - R 10.00</option>
+            <option value="Dettol">Dettol - R  7.99</option>
+        <option value="Domestos">Domestos - R 15.00</option>
+        <option value="Shoe polish">Shoe Polish - R 8.00</option>
+        <option value="Butter">Butter - R 25.00</option>
+        <option value="Yoghurt">Yoghurt - R 12.00</option>
+        <option value="Chicken">2.5kg Chicken - R 40.90</option>
+        <option value="Lamb chops">Lamb Chops - R 50.50</option>
+        <option value="Pasteurized milk">Pasteurized Milk - R 18.40</option>
+        <option value="Bread">Bread - R 15.99</option>
+        <option value="Rice">Rice - R 30.10</option>
+        <option value="Cooking Oil">Cooking Oil - R 20.30</option>
+        <option value="Peanut butter">Peanut Butter - R 15.50</option>
+        <option value="Jam spread">Jam Spread - R 12.99</option>
+        <option value="Fruit salad">Fruit Salad - R 25.45</option>
+        <option value="Onions">2kg Onions - R 10.99</option>
+        <option value="Tomato puree">Tomato Puree - R 18.09</option>
+        <option value="Toilet Paper">Toilet Paper - R 20.99</option>
+        <option value="New Musk Deodorant">New Musk Deodorant - R 15.55</option>
+        <option value="Solo Deodorant">Solo Deodorant - R 12.45</option>
+        <option value="Axe Deodorant">Axe Deodorant - R 20.00</option>
+        <option value="So Heavenly lotion">So Heavenly Body Cream - R 30.99</option>
+        <!-- Add more items as needed -->    
+            </select><br>
+      
+    </div>
+    <div class="input-container">
+        <label for="quantity" class="input-label"><b>Quantity:</b></label>
+        <input type="number" id="quantity" name="quantity" class="styled-input" placeholder="" required>
+    </div>
+</form>
+
+<!-- Add this to your HTML file -->
+<div id="countdown"></div>
+
+                <div class="button-container">
+                    <button type="submit" onclick="addToTray()" class="styled-button add-to-tray-button"><b>Add to Tray</b></button>
+
+                    <button type="button" onclick="calculateTotal()" class="styled-button tray-button sum-total-button">
+                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        <b>Sum Total</b>
+                    </button>
+                </div>
+
+                <!-- Modified Cash Tendered field with an "Enter" button -->
+                <div class="input-container">
+                    <label for="cash_tendered"><b>Cash Tendered:</b></label>
+                    <input type="text" id="cash_tendered" name="cash_tendered" class="cash-input" placeholder="Enter cash amount" required>
+                </div>
+
+                <!-- Added  the "History" button  -->
+<button type="button" onclick="showHistory()" class="history-button">
+    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+    <b>History</b>
+</button>
+
+                <div class="button-container">
+                    <button type="button" onclick="enterCash()" class="styled-button enter-cash-button"><b>Enter</b></button>
+                    <button type="button" onclick="resetTray()" class="styled-button reset-button"><b>Clear</b></button>
+                </div>
+                <div class="result" id="result"></div>
+                
+<!-- Added "Print Receipt" button -->
+<button type="button" onclick="printReceipt()" class="styled-button print-receipt-button"><b>Print Receipt</b></button>
+
+                <!-- Logout Button -->
+                <button id="logoutButton" class="styled-button logout-button"><b>Terminate Session</b></button>
+            </form>
+        </div>
+    </div>
+
+      
+
+    <footer class="footer">
+        <p class="text-center">Powered by KSI Concept | © 2024</p>
+    </footer>
+
+    <script src="cash_register.js"></script>
+</body>
+</html>

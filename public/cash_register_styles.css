@@ -1,0 +1,255 @@
+/* public/cash_register_styles.css */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d9dfe9 !important;
+
+}
+
+header.bg-primary {
+    background-color: #007bff !important;
+}
+
+header.text-white {
+    color: white;
+}
+
+header.text-center {
+    text-align: center !important;
+}
+
+header.py-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+header h1 {
+    font-size: 20px !important;
+    margin-bottom: 5px !important;
+    letter-spacing: 1px;
+    font-family: 'Poppins', 'Open Sans', sans-serif;
+}
+
+header p {
+    font-style: italic;
+    font-size: 9px;
+}
+/* Style for the fancy clock widget */.fancy-clock {
+    position: absolute;
+    top: 5%;
+    right: 70px;
+    transform: translateY(-50%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.fancy-clock span {
+    margin: 0 3px;
+}
+
+.ampm {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+#realTime {
+    text-align: center;
+    font-family: 'Poppins', serif;
+    color: #666;
+    margin-bottom: 10px;
+    /* Further reduced margin */
+    animation: fadeIn 1.5s ease-in-out;
+    font-size: 15px;
+}
+
+.cash-register-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    /* Reduced padding */
+    border: 2px solid transparent;
+    border-radius: 0;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #80bcdf !important;
+    font-size: 24px !important;
+    font-family: 'Poppins', 'Open Sans' !important;
+}
+
+.welcome-message {
+    text-align: center;
+    font-family: 'Poppins';
+    color: #666;
+    font-size: 18px;
+   
+}
+
+.timer {
+    text-align: center;
+    color: #FF4500;
+    font-family: 'Poppins', serif;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+form {
+    margin-top: 5px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    /* Further reduced margin */
+}
+
+.input-label {
+    flex: 0 0 45%;
+    /* Adjusted width for the labels */
+}
+
+.styled-input,
+.styled-select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    /* Further reduced margin */
+    padding: 12px;
+    /* Further reduced padding */
+    font-size: 14px;
+    /* Reduced font size */
+    border-radius: 6px;
+    /* Reduced border-radius */
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+
+.cash-input {
+    display: block;
+    width: 28%;
+    /* Reduced width */
+    margin-bottom: 10px;
+    margin-right: 52%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #ddd;
+    /* Light gray color */
+}
+
+
+.history-button {
+    display: block;
+    width: 48%;
+    margin-bottom: 10px;
+    margin-top: -70px;
+    margin-left: 52%;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgb(30, 181, 181);
+    color: #fff;
+}
+
+
+.styled-button,
+.tray-button,
+.reset-button {
+    display: block;
+    width: 48%;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: darkslategray;
+    color: #fff;
+}
+/* Added styling for "Print Receipt" button */
+.print-receipt-button {
+    display: block;
+    width: 48%;
+   margin-bottom: 10px;
+   padding: 12px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.logout-button {
+    display: block;
+    margin: -60px 0 0 auto;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #dc3545;
+    color: #fff;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    /* Further reduced margin */
+}
+
+.cash-tendered-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result {
+    text-align: center;
+    text-decoration: double;
+    margin-top: 15px;
+    /* Further reduced margin */
+    color: rgb(93, 86, 86)
+}
+#countdown {
+    display: none; /* Start with the countdown box invisible */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px; 
+    background-color: #fdf8f9; /* Light red background color */
+    border: 1px solid #d6d8db; 
+    border-radius: 10px; 
+    color: #975b61; /* Dark red text color */
+    text-align: center;
+    font-size: 16px; /* Increased font size for a poppin style */
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif; /* Poppin font style */
+}
+
+#countdownTimer {
+    color: red; /* Red color for the countdown timer */
+}
+
+.footer {
+    margin-top: 5px;
+    /* Further reduced margin */
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+

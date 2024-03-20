@@ -1,0 +1,160 @@
+body {
+    background-image: url('/images/background.jpg');
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #f3efede8;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 50%;
+    margin-bottom: 50px; /* Adjusted margin-top to push the container up */
+}
+
+h1 {
+    color: #3498db;
+    font-size: 2.1em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+/* Center the requirements list */
+.requirements-list {
+    padding-left: 0; /* Remove default padding to align with text */
+    text-align: center; /* Center the text within the container */
+}
+
+.login-description {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 15px;
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Align items vertically in the flex container */
+    justify-content: center; /* Center items horizontally in the flex container */
+}
+
+/* Add a pseudo-element to create custom bullets */
+.requirements-list li {
+    list-style-type: none; /* Remove default bullet */
+}
+
+.requirements-list li::before {
+    content: '\2022'; /* Unicode character for bullet point */
+    color: #555; /* Match the text color */
+    margin-right: 5px; /* Adjust the space between bullet and text */
+}
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+    box-shadow: none;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+button {
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .login-container {
+        width: 80%; /* Adjusted width for smaller screens */
+    }
+
+    /* Mobile navigation */
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+    }
+
+    .mobile-nav h1 {
+        margin: 0;
+    }
+
+    .mobile-nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .mobile-nav-menu a {
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .mobile-nav-button {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5em;
+    }
+
+    .mobile-nav-button:hover + .mobile-nav-menu {
+        display: flex;
+    }
+}
+
+.footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
